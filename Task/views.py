@@ -17,13 +17,4 @@ def home(request):
     context = {
         'errors_counts': errors_counts
     }
-    print(Patient.objects.filter(first_name= None).count())
-    print(Patient.objects.filter(last_name= None).count())
-    print(Patient.objects.filter(dob= None).count())
-    print(Patient.objects.filter(mrn= None).count())
-    print(Patient.objects.filter(address= None).count())
-    print(Patient.objects.filter(physician= None).count())
-    print(Patient.objects.filter(phone= None).count())
-    print(Patient.objects.filter(sex= None).count())
-    print(Patient.objects.all().count())
     return render(request, "Task/home.html", context)
